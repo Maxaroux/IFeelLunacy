@@ -12,13 +12,13 @@ EditorBuildSettings:
     path: Assets/Scenes/TitleScreen.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/TempleMiddle.unity
+    path: Assets/Scenes/Earth.unity
     guid: 3d7e007dc5e8749388a1462238c10895
   - enabled: 1
-    path: Assets/Scenes/TempleBedroom.unity
+    path: Assets/Scenes/FirstQuarter.unity
     guid: 075f1bc6d937f426d8a3c1767de02c00
   - enabled: 1
-    path: Assets/Scenes/BedroomLockbox.unity
+    path: Assets/Scenes/FirstQuarterLockbox.unity
     guid: 4f63a77e9acea42b0a0a269e2ee6d640
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
