@@ -1,28 +1,35 @@
 using System;
-using System.Numerics;
-using JetBrains.Rider.Unity.Editor;
-using Unity.Mathematics;
-using Unity.VisualScripting;
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
-using UnityEngine.AI;
-using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
+using UnityEngine.U2D.IK;
 
 public class PlayerScript : MonoBehaviour
 {
     public Rigidbody2D rigid2D;
     public SpriteRenderer sprite;
     public float slowSpeed, speedScale;
-    public bool playerVisible = true;
+    public bool playerVisible = true, addedScene = false;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        DontDestroyOnLoad(this.gameObject);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(SceneManager.GetSceneByName("TitleScreen").Equals(SceneManager.GetActiveScene()))
+        {
+            playerVisible = false;
+            sprite.enabled = false;
+        }
+        else
+        {
+            playerVisible = true;
+            sprite.enabled = true;
+        }
+
         if((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) && playerVisible)
             rigid2D.linearVelocityY = speedScale;
             //rigid2D.AddForceY(speedScale);
