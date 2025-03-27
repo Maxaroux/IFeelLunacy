@@ -26,5 +26,17 @@ public class MiddleLogicScript : MonoBehaviour
             GameObject.Find("Lockbox").tag = "Solved";
             SceneManager.UnloadSceneAsync("Earth");
         }
+        else if(Player.GetComponent<Rigidbody2D>().position.y < -6.5)
+        {
+            if(!addedScene)
+            {
+                SceneManager.LoadScene("NewMoon", LoadSceneMode.Additive);
+                addedScene = true;
+            }
+            Scene currentScene = SceneManager.GetSceneByName("NewMoon");
+            Player.GetComponent<Rigidbody2D>().MovePosition(new Vector2(0,0));
+            SceneManager.UnloadSceneAsync("Earth");
+        }
+        addedScene = false;
     }
 }
