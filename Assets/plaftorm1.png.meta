@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f159312ce31d39b4ca53e750548341f0
+guid: 7e52c297e7d68e144aae525e347dfa91
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -39968082123777586
-    second: GridTile_0
+      213: -566648569735390208
+    second: plaftorm1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GridTile_0
+      name: plaftorm1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 200
-        height: 200
+        width: 233
+        height: 79
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ec998a6bd31027ff0800000000000000
-      internalID: -39968082123777586
+      spriteID: 00c5078c02cd228f0800000000000000
+      internalID: -566648569735390208
       vertices: []
       indices: 
       edges: []
