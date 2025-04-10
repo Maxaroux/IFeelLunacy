@@ -9,6 +9,7 @@ TagManager:
   - DoorCollideWall
   - Unsolved
   - Solved
+  - FlowCrescent
   layers:
   - Default
   - TransparentFX
