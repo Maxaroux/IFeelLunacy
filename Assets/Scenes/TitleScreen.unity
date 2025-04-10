@@ -486,12 +486,36 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7288363780253493887, guid: 5e0c50fe4a2974ed6a17bbdab8c8a9b5, type: 3}
+      propertyPath: jumpPower
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7288363780253493887, guid: 5e0c50fe4a2974ed6a17bbdab8c8a9b5, type: 3}
+      propertyPath: speedScale
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7288363780253493887, guid: 5e0c50fe4a2974ed6a17bbdab8c8a9b5, type: 3}
+      propertyPath: speedScaleX
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7288363780253493887, guid: 5e0c50fe4a2974ed6a17bbdab8c8a9b5, type: 3}
+      propertyPath: speedScaleY
+      value: 12.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7288363780253493887, guid: 5e0c50fe4a2974ed6a17bbdab8c8a9b5, type: 3}
       propertyPath: playerVisible
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7288363780253493887, guid: 5e0c50fe4a2974ed6a17bbdab8c8a9b5, type: 3}
+      propertyPath: doubleJumpPower
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 9083106617260499621, guid: 5e0c50fe4a2974ed6a17bbdab8c8a9b5, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 9083106617260499621, guid: 5e0c50fe4a2974ed6a17bbdab8c8a9b5, type: 3}
+      propertyPath: m_TagString
+      value: Top-Down
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

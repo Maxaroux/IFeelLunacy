@@ -9,6 +9,7 @@ public class MiddleLogicScript : MonoBehaviour
     void Start()
     {
         Player = GameObject.Find("Player");
+        addedScene = false;
     }
 
     // Update is called once per frame
@@ -21,22 +22,23 @@ public class MiddleLogicScript : MonoBehaviour
                 SceneManager.LoadScene("FirstQuarter", LoadSceneMode.Additive);
                 addedScene = true;
             }
-            Scene currentScene = SceneManager.GetSceneByName("FirstQuarter");
             Player.GetComponent<Rigidbody2D>().MovePosition(new Vector2(-Player.GetComponent<Rigidbody2D>().position.x-1f, 0));
             GameObject.Find("Lockbox").tag = "Solved";
             SceneManager.UnloadSceneAsync("Earth");
         }
-        else if(Player.GetComponent<Rigidbody2D>().position.y < -6.5)
+        if(Player.GetComponent<Rigidbody2D>().position.y < -6.5)
         {
-            if(!addedScene)
-            {
-                SceneManager.LoadScene("NewMoon", LoadSceneMode.Additive);
-                addedScene = true;
-            }
-            Scene currentScene = SceneManager.GetSceneByName("NewMoon");
-            Player.GetComponent<Rigidbody2D>().MovePosition(new Vector2(0,0));
-            SceneManager.UnloadSceneAsync("Earth");
+            Player.GetComponent<Rigidbody2D>().position = new Vector2(-6,0);
+            Player.GetComponent<Rigidbody2D>().gravityScale = 10;
+            Player.tag = "Platformer";
+            SceneManager.LoadScene("NewMoon", LoadSceneMode.Single);
         }
-        addedScene = false;
+        if(Player.GetComponent<Rigidbody2D>().position.y > 6.5)
+        {
+            Player.GetComponent<Rigidbody2D>().position = new Vector2(-6,0);
+            Player.GetComponent<Rigidbody2D>().gravityScale = 10;
+            Player.tag = "Platformer";
+            SceneManager.LoadScene("FullMoon", LoadSceneMode.Single);
+        }
     }
 }

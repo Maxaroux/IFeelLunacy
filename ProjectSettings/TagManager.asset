@@ -9,6 +9,8 @@ TagManager:
   - DoorCollideWall
   - Unsolved
   - Solved
+  - Platformer
+  - Top-Down
   layers:
   - Default
   - TransparentFX
