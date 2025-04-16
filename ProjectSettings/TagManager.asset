@@ -11,6 +11,8 @@ TagManager:
   - Solved
   - Platformer
   - Top-Down
+  - Day
+  - Night
   layers:
   - Default
   - TransparentFX
