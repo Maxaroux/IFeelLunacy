@@ -29,7 +29,7 @@ public class GridManager : MonoBehaviour
                 float posY = (row * -tileSize) + (3 * tileSize);
 
                 tile.transform.position = new Vector2(posX, posY);
-
+                
             }
         }
         Destroy(referenceTile);
@@ -39,5 +39,15 @@ public class GridManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    class GridTile
+    {
+        string curColor, correctColor;
+        bool constantTile;
+        void setColor()
+        {
+            
+        }
     }
 }

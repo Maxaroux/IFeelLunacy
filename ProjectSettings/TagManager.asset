@@ -10,6 +10,10 @@ TagManager:
   - Unsolved
   - Solved
   - FlowCrescent
+  - Triangle/Green
+  - Crescent/Blue
+  - Star/Yellow
+  - YinYang
   layers:
   - Default
   - TransparentFX
