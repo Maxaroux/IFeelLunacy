@@ -9,10 +9,11 @@ TagManager:
   - DoorCollideWall
   - Unsolved
   - Solved
-  - Platformer
-  - Top-Down
-  - Day
-  - Night
+  - FlowCrescent
+  - Triangle/Green
+  - Crescent/Blue
+  - Star/Yellow
+  - YinYang
   layers:
   - Default
   - TransparentFX

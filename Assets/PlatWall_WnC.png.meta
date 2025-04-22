@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ca38209c0da1f4ebe882a1368a095132
+guid: f5e8f167fd850fc4584c209b13bafb14
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8050210221574393650
-    second: side wall_0
+      213: 3780319954987027566
+    second: PlatWall_WnC_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,24 +96,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: side wall_0
+      name: PlatWall_WnC_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ec0f6df8478e74090800000000000000
-      internalID: -8050210221574393650
+      spriteID: e6c825658f4667430800000000000000
+      internalID: 3780319954987027566
       vertices: []
       indices: 
       edges: []
@@ -147,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      side wall_0: -8050210221574393650
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
