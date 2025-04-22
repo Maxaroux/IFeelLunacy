@@ -7,6 +7,7 @@ public class CrescentPathScript : MonoBehaviour
     void Start()
     {
         correctColor = "Blue";
+        currentColor = "None";
     }
 
     // Update is called once per frame
