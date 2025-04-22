@@ -20,14 +20,8 @@ public class MiddleLogicScript : MonoBehaviour
     {
         if(Player.GetComponent<Rigidbody2D>().position.x < -10)
         {
-            if(!addedScene)
-            {
-                SceneManager.LoadScene("FirstQuarter", LoadSceneMode.Additive);
-                addedScene = true;
-            }
+            SceneManager.LoadScene("FirstQuarter", LoadSceneMode.Single);
             Player.GetComponent<Rigidbody2D>().MovePosition(new Vector2(-Player.GetComponent<Rigidbody2D>().position.x-1f, 0));
-            GameObject.Find("Lockbox").tag = "Solved";
-            SceneManager.UnloadSceneAsync("Earth");
         }
         if(Player.GetComponent<Rigidbody2D>().position.y < -6.5)
         {

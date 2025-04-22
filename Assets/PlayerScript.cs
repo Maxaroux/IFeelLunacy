@@ -12,20 +12,17 @@ public class PlayerScript : MonoBehaviour
     public SpriteRenderer sprite;
     public Light2D dayCycle;
     public float slowSpeed, speedScale;
-    public float jumpPower, doubleJumpPower;
     public bool playerVisible = true;
 
-    public bool hasDoubleJump = false, hasWallJump = false;
-
+    //variables to make double jump work when unlocked
     bool doubleJump = false, grounded;
+    public float jumpPower, doubleJumpPower;
+
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         DontDestroyOnLoad(this.gameObject);
     }
-
-    // Update is called once per frame
     void Update()
     {
         if(SceneManager.GetSceneByName("TitleScreen").Equals(SceneManager.GetActiveScene()))
@@ -72,8 +69,8 @@ public class PlayerScript : MonoBehaviour
             {
                 if(grounded || doubleJump)
                 {
-                    rigid2D.linearVelocityY = (doubleJump && hasDoubleJump) ? doubleJumpPower : jumpPower;
-                    if(hasDoubleJump)
+                    rigid2D.linearVelocityY = (doubleJump && GetComponent<gameConstants>().hasDoubleJump) ? doubleJumpPower : jumpPower;
+                    if(GetComponent<gameConstants>().hasDoubleJump)
                         doubleJump = !doubleJump;
                 }
             }
@@ -85,10 +82,15 @@ public class PlayerScript : MonoBehaviour
             if(Input.GetKeyUp(KeyCode.LeftShift))
             {
                 if(dayCycle.tag.Equals("Day"))
-                    dayCycle.tag = "Night";
+                    GetComponent<gameConstants>().isDay = false;
                 else
-                    dayCycle.tag = "Day";
+                    GetComponent<gameConstants>().isDay = true;
             }
+
+            if(GetComponent<gameConstants>().isDay)
+                dayCycle.tag = "Day";
+            else
+                dayCycle.tag = "Night";
 
             if(rigid2D.position.x > -3.5f && rigid2D.position.x < 103 && rigid2D.position.y < -3)
                 die();
@@ -109,7 +111,7 @@ public class PlayerScript : MonoBehaviour
     {
         if(tag.Equals("Platformer"))
         {
-            if(!hasWallJump)
+            if(!GetComponent<gameConstants>().hasWallJump)
             {
                 foreach (ContactPoint2D hitPos in collision.contacts)
                 {

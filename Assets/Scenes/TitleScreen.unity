@@ -631,7 +631,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2158342561756205286, guid: 5e0c50fe4a2974ed6a17bbdab8c8a9b5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 990860949}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9083106617260499621, guid: 5e0c50fe4a2974ed6a17bbdab8c8a9b5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1872371879}
   m_SourcePrefab: {fileID: 100100000, guid: 5e0c50fe4a2974ed6a17bbdab8c8a9b5, type: 3}
 --- !u!1 &1330373190
 GameObject:
@@ -804,6 +807,24 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9083106617260499621, guid: 5e0c50fe4a2974ed6a17bbdab8c8a9b5, type: 3}
   m_PrefabInstance: {fileID: 1240454035}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1872371879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872371878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5ae24035da604577b4fe51d43da573c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDay: 0
+  hasDoubleJump: 0
+  hasWallJump: 0
+  hasDash: 0
+  hasStasis: 0
+  FirstQuarterLock: 0
 --- !u!1 &1980762157
 GameObject:
   m_ObjectHideFlags: 0
