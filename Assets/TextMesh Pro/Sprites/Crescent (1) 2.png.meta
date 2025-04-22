@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 291a8f4a8c4c9034cb7ea5166b17df6b
+guid: 56f884c2e8f5140719ab35bb13f65d69
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4129842118599351029
-    second: PlatWall_WnG_0
+      213: 5131665395246215018
+    second: Crescent (1) 2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlatWall_WnG_0
+      name: Crescent (1) 2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 800
-        height: 350
+        width: 80
+        height: 90
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5fa9f89a685205930800000000000000
-      internalID: 4129842118599351029
+      spriteID: a6fa0ddfc76573740800000000000000
+      internalID: 5131665395246215018
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      PlatWall_WnG_0: 4129842118599351029
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

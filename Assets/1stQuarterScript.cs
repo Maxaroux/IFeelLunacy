@@ -27,7 +27,7 @@ public class BedLockScript : MonoBehaviour
         {
             if(player.GetComponent<Rigidbody2D>().position.y >= 3.3)
             {
-                if(Input.GetKeyDown(KeyCode.Space) && GetComponent<gameConstants>().hasAnkh)
+                if(Input.GetKeyDown(KeyCode.Space) && player.GetComponent<gameConstants>().hasAnkh)
                     SceneManager.LoadScene("FirstQuarterLockbox", LoadSceneMode.Single);
             }
         }

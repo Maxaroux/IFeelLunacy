@@ -111,6 +111,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -259,7 +272,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Ankh_Awakened_0: 621918664479874038
+      Ankh_Awakened_1: -4514146111870734916
+      Ankh_Awakened_2: 3888496739606657491
+      Ankh_Awakened_3: -3574150462510569533
+      Ankh_Awakened_4: 6326804436859756208
+      Ankh_Awakened_5: -4836311484904610263
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
