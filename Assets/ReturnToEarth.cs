@@ -16,7 +16,7 @@ public class ReturnToEarth : MonoBehaviour
     {
         if(player.GetComponent<Rigidbody2D>().position.x > 10)
         {
-            player.GetComponent<Rigidbody2D>().position = new Vector2(player.GetComponent<Rigidbody2D>().position.x -1, 0);
+            player.GetComponent<Rigidbody2D>().position = new Vector2(0,4.5f);
             SceneManager.LoadScene("Earth");
         }
     }

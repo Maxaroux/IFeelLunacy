@@ -32,7 +32,7 @@ public class PlatformEntranceScript : MonoBehaviour
         else if(SceneManager.GetActiveScene().name.Equals("FullMoon"))
         {
             Player.tag = "Top-Down";
-            Player.GetComponent<Rigidbody2D>().position = new Vector2(0, 4.5f);
+            Player.GetComponent<Rigidbody2D>().position = new Vector2(9, 0);
             SceneManager.LoadSceneAsync("WaxingGibbous", LoadSceneMode.Single);
         }   
         light2D.tag = "Day";

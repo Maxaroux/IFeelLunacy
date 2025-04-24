@@ -17,7 +17,11 @@ public class BedLockScript : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("Player");
-        GameObject.Find("GetAnkhText").SetActive(false);
+        if(player.GetComponent<gameConstants>().hasAnkh)
+        {
+            GameObject.Find("GetAnkhText").SetActive(false);
+            GameObject.Find("Ankh").GetComponent<SpriteRenderer>().enabled = false;
+        }
     }
 
     // Update is called once per frame
@@ -42,6 +46,7 @@ public class BedLockScript : MonoBehaviour
                     Debug.Log("gettingAnkh?");
                     player.GetComponent<gameConstants>().hasAnkh = true;
                     GameObject.Find("Ankh").GetComponent<SpriteRenderer>().enabled = false;
+                    GameObject.Find("GetAnkhText").SetActive(false);
                 }
             }
         }
