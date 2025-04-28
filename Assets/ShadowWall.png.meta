@@ -484,7 +484,22 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ShadowWall_0: -5054826955258493257
+      ShadowWall_1: 7127990838201887306
+      ShadowWall_10: 7934607586446507735
+      ShadowWall_11: 1881298635606699583
+      ShadowWall_12: 3195371009545398051
+      ShadowWall_13: 8564387456349333118
+      ShadowWall_14: 2339921316116334329
+      ShadowWall_2: 5923309600583129991
+      ShadowWall_3: 7550629735796173325
+      ShadowWall_4: -8575238910891644930
+      ShadowWall_5: -1630984054607249315
+      ShadowWall_6: 3544779282806760987
+      ShadowWall_7: 4753924869428654638
+      ShadowWall_8: -1013832789160373165
+      ShadowWall_9: 7856777656820309400
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
