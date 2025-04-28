@@ -74,3 +74,13 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 .DS_Store
+./.DS_Store
+./Assets/.DS_Store
+./Assets/TextMesh
+Pro/.DS_Store
+./Library/.DS_Store
+./Library/Artifacts/.DS_Store
+./Library/Bee/.DS_Store
+./Library/PackageCache/com.unity.test-framework@5ac417e07314/UnityEditor.TestRunner/TestRun/Tasks/.DS_Store
+./Library/PackageCache/com.unity.visualscripting@1b53f46e931b/.DS_Store
+./Library/TempArtifacts/.DS_Store
