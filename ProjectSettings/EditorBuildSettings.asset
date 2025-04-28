@@ -8,9 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TitleScreen.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 0
-    path: Assets/Scenes/TitleScreen.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
     path: Assets/Scenes/Earth.unity
     guid: 3d7e007dc5e8749388a1462238c10895
@@ -27,8 +24,17 @@ EditorBuildSettings:
     path: Assets/Scenes/FullMoon.unity
     guid: de71839983fd34660a16b44f11e361c6
   - enabled: 1
+    path: Assets/Scenes/ThirdQuarterSelect.unity
+    guid: 55e1fd40655ae44e7a632f9df0a337c2
+  - enabled: 1
     path: Assets/Scenes/WaxingGibbous.unity
     guid: 31a4bccb4749e4abc9feb7cda4a4a5bd
+  - enabled: 1
+    path: Assets/Scenes/PreDashThirdQuarter.unity
+    guid: 2c206c3f16a93418a93fa9bcc94fd572
+  - enabled: 1
+    path: Assets/Scenes/PostDashThirdQuarter.unity
+    guid: e5a805bbc3d5e4a86b1b29a072352828
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -23,6 +23,14 @@ public class MiddleLogicScript : MonoBehaviour
             SceneManager.LoadScene("FirstQuarter", LoadSceneMode.Single);
             Player.GetComponent<Rigidbody2D>().MovePosition(new Vector2(-Player.GetComponent<Rigidbody2D>().position.x-1f, 0));
         }
+        if(Player.GetComponent<Rigidbody2D>().position.x > 10)
+        {
+            Player.GetComponent<Rigidbody2D>().MovePosition(new Vector2(0, -3));
+            Player.tag = "Platformer";
+            light2D.tag = "Day";
+
+            SceneManager.LoadScene("ThirdQuarterSelect", LoadSceneMode.Single);
+        }
         if(Player.GetComponent<Rigidbody2D>().position.y < -6.5)
         {
             Player.GetComponent<Rigidbody2D>().position = new Vector2(-6,0);

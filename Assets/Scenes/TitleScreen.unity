@@ -825,6 +825,7 @@ MonoBehaviour:
   hasDash: 0
   hasStasis: 0
   FirstQuarterLock: 0
+  hasAnkh: 0
 --- !u!1 &1980762157
 GameObject:
   m_ObjectHideFlags: 0
