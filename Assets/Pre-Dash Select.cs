@@ -9,6 +9,7 @@ public class ThirdQuarterSelectionScript : MonoBehaviour
     void Start()
     {
         light2D = GameObject.Find("Player").GetComponentInChildren<Light2D>();
+        light2D.tag = "Day";
     }
 
     // Update is called once per frame

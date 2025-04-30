@@ -28,23 +28,19 @@ public class MiddleLogicScript : MonoBehaviour
             Player.GetComponent<Rigidbody2D>().MovePosition(new Vector2(0, -3));
             Player.tag = "Platformer";
             light2D.tag = "Day";
-
-            SceneManager.LoadScene("ThirdQuarterSelect", LoadSceneMode.Single);
+            if(Player.GetComponent<Rigidbody2D>().position.y > -7)
+                SceneManager.LoadScene("ThirdQuarterSelect", LoadSceneMode.Single);
         }
         if(Player.GetComponent<Rigidbody2D>().position.y < -6.5)
         {
             Player.GetComponent<Rigidbody2D>().position = new Vector2(-6,0);
-            Player.GetComponent<Rigidbody2D>().gravityScale = 10;
             Player.tag = "Platformer";
-            
             SceneManager.LoadScene("NewMoon", LoadSceneMode.Single);
         }
         if(Player.GetComponent<Rigidbody2D>().position.y > 6.5)
         {
             Player.GetComponent<Rigidbody2D>().position = new Vector2(-6,0);
-            Player.GetComponent<Rigidbody2D>().gravityScale = 10;
             Player.tag = "Platformer";
-            light2D.tag = "Night";
             SceneManager.LoadScene("FullMoon", LoadSceneMode.Single);
         }
     }

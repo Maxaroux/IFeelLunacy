@@ -10,6 +10,7 @@ public class PlayerScript : MonoBehaviour
 {
     public Rigidbody2D rigid2D;
     public SpriteRenderer sprite;
+    public Sprite topDown, platformer;
     public Light2D dayCycle;
     public float slowSpeed, speedScale;
     public bool playerVisible = true;
@@ -21,7 +22,7 @@ public class PlayerScript : MonoBehaviour
     
     void Start()
     {
-        DontDestroyOnLoad(this.gameObject);
+        DontDestroyOnLoad(this);
     }
     void Update()
     {
@@ -37,16 +38,29 @@ public class PlayerScript : MonoBehaviour
         }
 
         if(tag.Equals("Top-Down"))
-        {     
+        {    
+            GetComponent<SpriteRenderer>().sprite = topDown;
+            GetComponent<Rigidbody2D>().gravityScale = 0;
             if((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) && playerVisible)
+            {
                 rigid2D.linearVelocityY = speedScale;
+                transform.eulerAngles = Vector3.forward;
+            }
             if((Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) && playerVisible)
+            {
                 rigid2D.linearVelocityY = -speedScale;
+                transform.eulerAngles = Vector3.forward * 180;
+            }
             if((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && playerVisible)
+            {
                 rigid2D.linearVelocityX = -speedScale;
+                transform.eulerAngles = Vector3.forward * 90;
+            }
             if((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) && playerVisible)
+            {
                 rigid2D.linearVelocityX = speedScale;
-
+                transform.eulerAngles = Vector3.back * 90;
+            }
 
             if(rigid2D.totalForce.y == 0)
             {
@@ -61,6 +75,8 @@ public class PlayerScript : MonoBehaviour
         }
         else if(tag.Equals("Platformer"))
         {
+            GetComponent<SpriteRenderer>().sprite = platformer;
+            GetComponent<Rigidbody2D>().gravityScale = 10;
             if((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && playerVisible)
                 rigid2D.linearVelocityX = -speedScale;
             if((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) && playerVisible)
@@ -92,8 +108,11 @@ public class PlayerScript : MonoBehaviour
             else
                 dayCycle.tag = "Night";
 
-            if(rigid2D.position.x > -3.5f && rigid2D.position.x < 103 && rigid2D.position.y < -3)
-                die();
+            if(!SceneManager.GetActiveScene().name.Equals("ThirdQuarterSelect"))
+            {
+                if(rigid2D.position.x > -3.5f && rigid2D.position.x < 103 && rigid2D.position.y < -3)
+                    die();
+            }
         }
 
         if(rigid2D.totalForce.x == 0)

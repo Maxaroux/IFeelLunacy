@@ -1,3 +1,4 @@
+using System.Threading;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
@@ -21,27 +22,50 @@ public class NewMoonExitScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Player.tag = "Top-Down";
-        light2D.tag = "Day";
-        Player.GetComponent<Rigidbody2D>().gravityScale = 0;
-        if(SceneManager.GetActiveScene().name.Equals("NewMoon") || SceneManager.GetActiveScene().name.Equals("FullMoon") || SceneManager.GetActiveScene().name.Equals("ThirdQuarterSelect"))
+        if(SceneManager.GetActiveScene().name.Equals("NewMoon") || SceneManager.GetActiveScene().name.Equals("FullMoon"))
         {
             if(SceneManager.GetActiveScene().name.Equals("NewMoon"))
+            {
+                Player.tag = "Top-Down";
                 Player.GetComponent<Rigidbody2D>().position = new Vector2(0,-4.5f);
+                SceneManager.LoadScene("Earth", LoadSceneMode.Single);
+            }
             else if(SceneManager.GetActiveScene().name.Equals("FullMoon"))
+            {
+                Player.tag = "Top-Down";
                 Player.GetComponent<Rigidbody2D>().position = new Vector2(0,4.5f);
-            else if(SceneManager.GetActiveScene().name.Equals("ThirdQuarterSelect"))
-                Player.GetComponent<Rigidbody2D>().position = new Vector2(9, 0);
-            SceneManager.LoadScene("Earth", LoadSceneMode.Single);
+                SceneManager.LoadScene("Earth", LoadSceneMode.Single);
+            }
         }
         else
         {
-            if(SceneManager.GetActiveScene().name.Equals("Pre-DashThirdQuarter"))
-                Player.GetComponent<Rigidbody2D>().position = new Vector2(8,0);
-            else if(SceneManager.GetActiveScene().name.Equals("Post-DashThirdQuarter"))
-                Player.GetComponent<Rigidbody2D>().position = new Vector2(-8,0);
+            Player.tag = "Platformer";
+            if(SceneManager.GetActiveScene().name.Equals("PreDashThirdQuarter"))
+                Player.GetComponent<Rigidbody2D>().position = new Vector2(0,-3);
+            else if(SceneManager.GetActiveScene().name.Equals("PostDashThirdQuarter"))
+                Player.GetComponent<Rigidbody2D>().position = new Vector2(0,-3);
             SceneManager.LoadScene("ThirdQuarterSelect");
         }
         light2D.tag = "Day";
+    }
+
+    private void test(Collision2D collision)
+    {
+        if(SceneManager.GetActiveScene().name.Equals("ThirdQuarterSelect"))
+        {
+            Debug.Log("testttt");
+            if(Input.GetKey(KeyCode.Space))
+            {
+                Debug.Log("HAIIII");
+                Player.tag = "Top-Down";
+                Player.GetComponent<Rigidbody2D>().position = new Vector2(9, 0);
+                SceneManager.LoadScene("Earth", LoadSceneMode.Single);
+            }
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        Invoke("test", 1);
     }
 }
