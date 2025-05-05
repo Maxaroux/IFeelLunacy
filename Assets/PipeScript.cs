@@ -5,32 +5,73 @@ using UnityEngine;
 public class PipeScript : MonoBehaviour
 {
     float[] rotations = { 0,90,180,270 };
-    public float correctRotation;
+    public float[] correctRotation;
     [SerializeField]
     bool isPlaced = false;
 
+    int PossibleRots = 1;
+
+    GameManager gameManager;
+
+    private void Awake()
+    {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
+
     private void Start()
     {
-        int rand = Random.Range(0, rotations.Length);
-        transform.eulerAngles = new Vector3(0, 0, rotations[rand]);
+        PossibleRots = correctRotation.Length;
+        transform.eulerAngles = new Vector3(0, 0, 0);
 
-        if (transform.eulerAngles.z == correctRotation)
+        if (PossibleRots >  1)
         {
-            isPlaced = true;
+            if (transform.eulerAngles.z == correctRotation[0] || transform.eulerAngles.z == correctRotation[1])
+            {
+                isPlaced = true;
+                gameManager.correctMove();
+            }
         }
+        else
+        {
+            if (transform.eulerAngles.z == correctRotation[0])
+            {
+                isPlaced = true;
+                gameManager.correctMove();
+            }
+        }
+        
     }
 
     private void OnMouseDown()
     {
         transform.Rotate(new Vector3(0, 0, 90));
 
-        if(transform.eulerAngles.z == correctRotation && isPlaced == false)
+        if(PossibleRots > 1)
         {
-            isPlaced = true;
+            if (transform.eulerAngles.z == correctRotation[0] || transform.eulerAngles.z == correctRotation[1] && isPlaced == false)
+            {
+                isPlaced = true;
+                gameManager.correctMove();
+
+            }
+            else if (isPlaced == true)
+            {
+                isPlaced = false;
+                gameManager.wrongMove();
+            }
         }
-        else if(isPlaced == true)
+        else
         {
-            isPlaced = false;
+            if (transform.eulerAngles.z == correctRotation[0] && isPlaced == false)
+            {
+                isPlaced = true;
+                gameManager.correctMove();
+            }
+            else if (isPlaced == true)
+            {
+                isPlaced = false;
+                gameManager.wrongMove();
+            }
         }
     }
 }

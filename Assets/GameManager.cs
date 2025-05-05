@@ -6,9 +6,12 @@ public class GameManager : MonoBehaviour
 {
     public GameObject PipesHolder;
     public GameObject[] Pipes;
+
     [SerializeField]
     int totalPipes = 0;
 
+    [SerializeField]
+    int correctedPipes = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,6 +24,21 @@ public class GameManager : MonoBehaviour
         {
             Pipes[i] = PipesHolder.transform.GetChild(i).gameObject;
         }
+    }
+
+    public void correctMove()
+    {
+        correctedPipes++;
+        Debug.Log("You made a correct move!");
+        if (correctedPipes == totalPipes)
+        {
+            Debug.Log("You solved the puzzle!");
+        }
+    }
+    public void wrongMove()
+    {
+        correctedPipes--;
+
     }
 
     // Update is called once per frame
