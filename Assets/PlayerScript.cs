@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
@@ -10,7 +11,6 @@ public class PlayerScript : MonoBehaviour
 {
     public Rigidbody2D rigid2D;
     public SpriteRenderer sprite;
-    public Sprite topDown, platformer;
     public Light2D dayCycle;
     public float slowSpeed, speedScale;
     public bool playerVisible = true;
@@ -39,7 +39,7 @@ public class PlayerScript : MonoBehaviour
 
         if(tag.Equals("Top-Down"))
         {    
-            GetComponent<SpriteRenderer>().sprite = topDown;
+            sprite.sprite = GetComponent<gameConstants>().topDown;
             GetComponent<Rigidbody2D>().gravityScale = 0;
             if((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) && playerVisible)
             {
@@ -75,13 +75,13 @@ public class PlayerScript : MonoBehaviour
         }
         else if(tag.Equals("Platformer"))
         {
-            GetComponent<SpriteRenderer>().sprite = platformer;
+            transform.eulerAngles = Vector3.forward;
             GetComponent<Rigidbody2D>().gravityScale = 10;
             if((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && playerVisible)
                 rigid2D.linearVelocityX = -speedScale;
             if((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) && playerVisible)
                 rigid2D.linearVelocityX = speedScale;
-            if((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) && playerVisible)
+            if((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && playerVisible)
             {
                 if(grounded || doubleJump)
                 {
@@ -154,6 +154,18 @@ public class PlayerScript : MonoBehaviour
     private void OnCollisionExit2D(Collision2D collision)
     {
         grounded = false;
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if(other.name.Equals("ExitCollider") && Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.Space))
+        {
+            Debug.Log("left");
+            tag = "Top-Down";
+            rigid2D.position = new Vector2(9,0);
+            GetComponent<gameConstants>().isDay = true;
+            SceneManager.LoadScene("Earth", LoadSceneMode.Single);
+        }
     }
 
     public void die()

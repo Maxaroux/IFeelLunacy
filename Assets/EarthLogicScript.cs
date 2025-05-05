@@ -27,6 +27,7 @@ public class MiddleLogicScript : MonoBehaviour
         {
             Player.GetComponent<Rigidbody2D>().MovePosition(new Vector2(0, -3));
             Player.tag = "Platformer";
+            Player.GetComponent<SpriteRenderer>().sprite = Player.GetComponent<gameConstants>().platformer;
             light2D.tag = "Day";
             if(Player.GetComponent<Rigidbody2D>().position.y > -7)
                 SceneManager.LoadScene("ThirdQuarterSelect", LoadSceneMode.Single);
@@ -34,6 +35,7 @@ public class MiddleLogicScript : MonoBehaviour
         if(Player.GetComponent<Rigidbody2D>().position.y < -6.5)
         {
             Player.GetComponent<Rigidbody2D>().position = new Vector2(-6,0);
+            Player.GetComponent<SpriteRenderer>().sprite = Player.GetComponent<gameConstants>().platformer;
             Player.tag = "Platformer";
             SceneManager.LoadScene("NewMoon", LoadSceneMode.Single);
         }
@@ -41,6 +43,7 @@ public class MiddleLogicScript : MonoBehaviour
         {
             Player.GetComponent<Rigidbody2D>().position = new Vector2(-6,0);
             Player.tag = "Platformer";
+            Player.GetComponent<SpriteRenderer>().sprite = Player.GetComponent<gameConstants>().platformer;
             SceneManager.LoadScene("FullMoon", LoadSceneMode.Single);
         }
     }

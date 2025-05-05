@@ -1,4 +1,3 @@
-using System.Threading;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
@@ -22,7 +21,7 @@ public class NewMoonExitScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(SceneManager.GetActiveScene().name.Equals("NewMoon") || SceneManager.GetActiveScene().name.Equals("FullMoon"))
+        if(SceneManager.GetActiveScene().name.Equals("NewMoon") || SceneManager.GetActiveScene().name.Equals("FullMoon") || SceneManager.GetActiveScene().name.Equals("ThirdQuarterSelect"))
         {
             if(SceneManager.GetActiveScene().name.Equals("NewMoon"))
             {
@@ -47,25 +46,5 @@ public class NewMoonExitScript : MonoBehaviour
             SceneManager.LoadScene("ThirdQuarterSelect");
         }
         light2D.tag = "Day";
-    }
-
-    private void test(Collision2D collision)
-    {
-        if(SceneManager.GetActiveScene().name.Equals("ThirdQuarterSelect"))
-        {
-            Debug.Log("testttt");
-            if(Input.GetKey(KeyCode.Space))
-            {
-                Debug.Log("HAIIII");
-                Player.tag = "Top-Down";
-                Player.GetComponent<Rigidbody2D>().position = new Vector2(9, 0);
-                SceneManager.LoadScene("Earth", LoadSceneMode.Single);
-            }
-        }
-    }
-
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        Invoke("test", 1);
     }
 }

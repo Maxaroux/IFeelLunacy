@@ -18,6 +18,7 @@ TagManager:
   - Top-Down
   - Night
   - Platformer
+  - InPuzzle
   layers:
   - Default
   - TransparentFX

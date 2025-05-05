@@ -546,8 +546,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2121161572946710685, guid: 5e0c50fe4a2974ed6a17bbdab8c8a9b5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4595262813571241778, guid: c1fd7dedb75b44710a9b5643449590cc, type: 3}
+    - target: {fileID: 2121161572946710685, guid: 5e0c50fe4a2974ed6a17bbdab8c8a9b5, type: 3}
       propertyPath: m_SortingOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2158342561756205286, guid: 5e0c50fe4a2974ed6a17bbdab8c8a9b5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2158342561756205286, guid: 5e0c50fe4a2974ed6a17bbdab8c8a9b5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2158342561756205286, guid: 5e0c50fe4a2974ed6a17bbdab8c8a9b5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -589,6 +601,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3321407424692314045, guid: 5e0c50fe4a2974ed6a17bbdab8c8a9b5, type: 3}
+      propertyPath: m_Size.x
+      value: 1.0412025
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321407424692314045, guid: 5e0c50fe4a2974ed6a17bbdab8c8a9b5, type: 3}
+      propertyPath: m_Size.y
+      value: 1.0932711
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321407424692314045, guid: 5e0c50fe4a2974ed6a17bbdab8c8a9b5, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.006979823
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321407424692314045, guid: 5e0c50fe4a2974ed6a17bbdab8c8a9b5, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.0153083205
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321407424692314045, guid: 5e0c50fe4a2974ed6a17bbdab8c8a9b5, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 3321407424692314045, guid: 5e0c50fe4a2974ed6a17bbdab8c8a9b5, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 7288363780253493887, guid: 5e0c50fe4a2974ed6a17bbdab8c8a9b5, type: 3}
+      propertyPath: topDown
+      value: 
+      objectReference: {fileID: -8779044932916004459, guid: 7e7c2b2a2367a477e84262c38d7292cc, type: 3}
     - target: {fileID: 7288363780253493887, guid: 5e0c50fe4a2974ed6a17bbdab8c8a9b5, type: 3}
       propertyPath: dayCycle
       value: 
@@ -597,6 +637,10 @@ PrefabInstance:
       propertyPath: jumpPower
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 7288363780253493887, guid: 5e0c50fe4a2974ed6a17bbdab8c8a9b5, type: 3}
+      propertyPath: platformer
+      value: 
+      objectReference: {fileID: 4595262813571241778, guid: c1fd7dedb75b44710a9b5643449590cc, type: 3}
     - target: {fileID: 7288363780253493887, guid: 5e0c50fe4a2974ed6a17bbdab8c8a9b5, type: 3}
       propertyPath: speedScale
       value: 7.5
@@ -825,6 +869,8 @@ MonoBehaviour:
   hasDash: 0
   hasStasis: 0
   FirstQuarterLock: 0
+  topDown: {fileID: 5905052889948298035, guid: a350a78367a5a44e9a4ff70e0ef7cd1f, type: 3}
+  platformer: {fileID: 4595262813571241778, guid: c1fd7dedb75b44710a9b5643449590cc, type: 3}
   hasAnkh: 0
 --- !u!1 &1980762157
 GameObject:

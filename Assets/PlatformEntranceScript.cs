@@ -23,7 +23,6 @@ public class PlatformEntranceScript : MonoBehaviour
     {
         Player.tag = "Top-Down";
         light2D.tag = "Day";
-        Player.GetComponent<Rigidbody2D>().gravityScale = 0;
         if(SceneManager.GetActiveScene().name.Equals("NewMoon"))
         {
             Player.GetComponent<Rigidbody2D>().position = new Vector2(0,-4.5f);
