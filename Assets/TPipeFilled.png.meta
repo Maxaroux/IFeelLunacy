@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c8a132754e07b4821aaaf631d759011a
+guid: 5d15e29933697b34e97bcd20bb909417
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -566648569735390208
-    second: plaftorm1_0
+      213: -7838719602184487513
+    second: TPipeFilled_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: plaftorm1_0
+      name: TPipeFilled_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 233
-        height: 79
+        width: 191
+        height: 130
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00c5078c02cd228f0800000000000000
-      internalID: -566648569735390208
+      spriteID: 7adf6e99d06473390800000000000000
+      internalID: -7838719602184487513
       vertices: []
       indices: 
       edges: []
@@ -147,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      plaftorm1_0: -566648569735390208
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
