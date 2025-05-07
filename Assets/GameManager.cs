@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject Player;
     public GameObject PipesHolder;
     public GameObject[] Pipes;
 
@@ -16,6 +18,9 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        Player = GameObject.Find("Player");
+        Player.tag = "inPuzzle";
+
         totalPipes = PipesHolder.transform.childCount;
 
         Pipes = new GameObject[totalPipes];
@@ -33,6 +38,10 @@ public class GameManager : MonoBehaviour
         if (correctedPipes == totalPipes)
         {
             Debug.Log("You solved the puzzle!");
+            Player.GetComponent<Rigidbody2D>().position = new Vector2(3.8f, 3.6f);
+            Player.GetComponent<gameConstants>().FirstQuarterLock = true;
+            Player.tag = "Top-Down";
+            SceneManager.LoadScene("FirstQuarter", LoadSceneMode.Single);
         }
     }
     public void wrongMove()

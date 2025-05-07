@@ -16,7 +16,14 @@ public class NewMoonExitScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(SceneManager.GetActiveScene().name.Equals("ThirdQuarterSelect") && Input.GetKeyDown(KeyCode.Escape))
+            {
+                Debug.Log("why");
+                Player.tag = "Top-Down";
+                Player.GetComponent<Light2D>().tag = "Day";
+                Player.GetComponent<Rigidbody2D>().position = new Vector2(0,9);
+                SceneManager.LoadScene("Earth", LoadSceneMode.Single);
+            }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

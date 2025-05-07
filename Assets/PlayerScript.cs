@@ -114,6 +114,11 @@ public class PlayerScript : MonoBehaviour
                     die();
             }
         }
+        else if(tag.Equals("InPuzzle"))
+        {
+            GetComponent<SpriteRenderer>().enabled = false;
+            playerVisible = false;
+        }
 
         if(rigid2D.totalForce.x == 0)
         {
@@ -161,9 +166,9 @@ public class PlayerScript : MonoBehaviour
         if(other.name.Equals("ExitCollider") && Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.Space))
         {
             Debug.Log("left");
-            tag = "Top-Down";
-            rigid2D.position = new Vector2(9,0);
             GetComponent<gameConstants>().isDay = true;
+            rigid2D.position = new Vector2(9,0);
+            tag = "Top-Down";
             SceneManager.LoadScene("Earth", LoadSceneMode.Single);
         }
     }

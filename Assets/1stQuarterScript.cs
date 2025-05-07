@@ -33,7 +33,10 @@ public class BedLockScript : MonoBehaviour
             if(player.GetComponent<Rigidbody2D>().position.y >= 3.3)
             {
                 if(Input.GetKeyDown(KeyCode.Space) && player.GetComponent<gameConstants>().hasAnkh)
+                {
                     SceneManager.LoadScene("FirstQuarterLockbox", LoadSceneMode.Single);
+                    player.tag = "InPuzzle";
+                }
             }
         }
         if(player.GetComponent<Rigidbody2D>().position.x >= -4 && player.GetComponent<Rigidbody2D>().position.x <= -1.3)
@@ -50,12 +53,6 @@ public class BedLockScript : MonoBehaviour
                     GameObject.Find("GetAnkhText").SetActive(false);
                 }
             }
-        }
-
-        if(Input.GetKeyDown(KeyCode.P))    
-        {
-            tag = "Solved";
-            player.GetComponent<gameConstants>().FirstQuarterLock = true;
         }
         
         if(player.GetComponent<gameConstants>().FirstQuarterLock)
