@@ -607,7 +607,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3321407424692314045, guid: 5e0c50fe4a2974ed6a17bbdab8c8a9b5, type: 3}
       propertyPath: m_Size.y
-      value: 1.0932711
+      value: 0.99122214
       objectReference: {fileID: 0}
     - target: {fileID: 3321407424692314045, guid: 5e0c50fe4a2974ed6a17bbdab8c8a9b5, type: 3}
       propertyPath: m_Offset.x
@@ -615,7 +615,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3321407424692314045, guid: 5e0c50fe4a2974ed6a17bbdab8c8a9b5, type: 3}
       propertyPath: m_Offset.y
-      value: 0.0153083205
+      value: 0.0051033497
       objectReference: {fileID: 0}
     - target: {fileID: 3321407424692314045, guid: 5e0c50fe4a2974ed6a17bbdab8c8a9b5, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -1120,8 +1120,8 @@ Camera:
   m_GameObject: {fileID: 2106340030}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
