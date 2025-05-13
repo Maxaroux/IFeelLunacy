@@ -113,6 +113,17 @@ public class PlayerScript : MonoBehaviour
                 if(rigid2D.position.x > -3.5f && rigid2D.position.x < 103 && rigid2D.position.y < -3)
                     die();
             }
+
+            if(SceneManager.GetActiveScene().name.Equals("ThirdQuarterSelect") && Input.GetKeyDown(KeyCode.Escape))
+            {
+                Debug.Log("why");
+                tag = "Top-Down";
+                GetComponentInChildren<Light2D>().tag = "Day";
+                GetComponent<Rigidbody2D>().position = new Vector2(9, 0);
+                SceneManager.LoadScene("Earth", LoadSceneMode.Single);
+            }
+
+
         }
         else if(tag.Equals("InPuzzle"))
         {
@@ -161,6 +172,7 @@ public class PlayerScript : MonoBehaviour
         grounded = false;
     }
 
+<<<<<<< Updated upstream
     private void OnTriggerStay2D(Collider2D other)
     {
         if(other.name.Equals("ExitCollider") && Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.Space))
@@ -173,11 +185,14 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
+=======
+>>>>>>> Stashed changes
     public void die()
     {
         if(tag.Equals("Platformer"))
         {
             rigid2D.position = new Vector2(-6, 0);
+            rigid2D.linearVelocityY = 0;
         }
     }
 }
